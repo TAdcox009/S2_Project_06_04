@@ -36,8 +36,40 @@ body>header>img {
     padding: 0px 100px 0px 100px;
 }
 
+body>header nav.links li {
+    transform: perspective(50px) rotateX(20deg);
+    background-color: rgb(255, 205, 154);
+    display: block;
+    float: left;
+    height: 40px;
+    letter-spacing: 3px;
+    line-height: 40px;
+    margin-left: 0%;
+    margin-right: 2%;
+    width: 7%;
+}
+
+body image {
+    display: table;
+    width: 33%;
+    padding: 10px 0px 10px 13px;
+}
+
+figure {
+    width: 25%;
+    float: left;
+    display: block;
+}
+
+figure::after {
+    display: table;
+    clear: both;
+    content: "";
+}
 
 
+
+/* nav styles */
 nav ul li {
     text-align: center;
     list-style: none;
