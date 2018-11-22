@@ -12,32 +12,45 @@
    Filename: br_styles.css
 
 */
+
+/* this is seting the background image of the whole website to the image */
 html {
     background: url(br_paper.png);
 }
 
 /* body styles */
+
+/* this is setting the background color of the body to a trasnparent tan color, adding a radial gradient that
+goes from one color to a different one adds a brownish border around the body. sets the minimum and maximum width. */
 body {
     background-color: rgba(255, 205, 154, 0.538);
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    max-width: 960px;
     min-width: 640px;
+    max-width: 960px;
     height: 100%;
+    background: radial-gradient(ellipse at top, #b98535, transparent),
+            radial-gradient(ellipse at bottom, #a57b06, transparent);
+    border: 3px solid rgb(128, 105, 0);
 }
 
+/* for the text inside the body inside a p tag, adds a text shadow, sets teh font size and font family.*/
 body p {
-    text-shadow: rgb(215, 224, 215) 2px 2px 1px, rgba(21, 21, 21, 0.66) 5px 5px 25px;
+    text-shadow: rgb(215, 224, 215) 2px 2px 1px, rgb(21, 21, 21) 5px 5px 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
 }
 
-
+/* adds padding to the image that is in the header of the body. the padding is centering the image. */
 body>header>img {
     padding: 0px 100px 0px 100px;
 }
 
+/* the transform property is making boxes around the links in the nav. this is also adding a backgound color, letter
+spacing is the space between the letters. */
 body>header nav.links li {
-    transform: perspective(50px) rotateX(20deg);
+    transform: rotateX(20deg);
     background-color: rgb(255, 205, 154);
     display: block;
     float: left;
@@ -49,18 +62,35 @@ body>header nav.links li {
     width: 7%;
 }
 
-body image {
+body nav.links2 {
+    background-color: rgb(255, 205, 154);
+    display: inline;
+    float: left;
+    width: 100%;
+}
+  
+/* this is displaying the images as a table, the filter is making the images color inverted */
+body>figure>img {
     display: table;
-    width: 33%;
-    padding: 10px 0px 10px 13px;
+    filter: invert(15%);
 }
 
+/* this is just adding padding to the aside so it can be centered */
+/*aside styles*/
+aside {
+    padding:0px 0px 0px 60px;
+}
+
+/*figure styles*/
+/* adds a box shadow around the images and the figcaptions */
 figure {
     width: 25%;
     float: left;
     display: block;
+    box-shadow:  rgb(215, 224, 215) 2px 2px 1px, rgb(21, 21, 21) 5px 5px 25px;
 }
 
+/* prevents container collapase */
 figure::after {
     display: table;
     clear: both;
@@ -68,12 +98,23 @@ figure::after {
 }
 
 
-
 /* nav styles */
+/* this is centering the text, getting rid of text decorations */
 nav ul li {
     text-align: center;
     list-style: none;
     display: inline;
     padding: 0px 50px 0px 50px;
     text-decoration: none;
+}
+
+/* gets rid of any decoration that would be under the links in the nav */
+nav a{
+    text-decoration: none;
+}
+
+/* footer styles */
+/* this is adding padding to the footer so it can be centered */
+footer {
+    padding: 0px 0px 0px 60px;
 }
